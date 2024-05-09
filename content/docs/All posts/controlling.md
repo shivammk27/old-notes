@@ -1,6 +1,7 @@
 ---
 title: Controlling temp, top_p and top_k
 type: docs
+
 ---
 
 ## Controlling temp, top_p and top_k
