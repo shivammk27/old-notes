@@ -11,7 +11,7 @@ Email - shivamkush[dot]2000[at]gmail[dot]com \
 DM on twitter - [shivammk27](https://twitter.com/shivammk27) \
 Check my blog site [here](https://shivammk27.github.io)
 
-{{< columns >}}
+<!-- {{< columns >}}
 
 ### Technology
 
@@ -21,20 +21,20 @@ Check my blog site [here](https://shivammk27.github.io)
 
 ### Stock Market
 
-<!-- - [test]({{< relref "/docs/controlling.md" >}}) -->
+- [Trade Diary]({{< relref "/docs/tradeDiary.md" >}})
 
 <--->
 
 ### Philosophy
 
-<!-- - [test]({{< relref "/docs/two.md" >}}) -->
+<!-- - [Trade Diary]({{< relref "/docs/tradeDiary.md" >}}) -->
 
 <--->
 
 ### General Muse
 
-<!-- - [test]({{< relref "/docs/two.md" >}}) -->
+<!-- - [Trade Diary]({{< relref "/docs/tradeDiary.md" >}}) -->
 
 <--->
 
-{{< /columns >}}
+{{< /columns >}} -->

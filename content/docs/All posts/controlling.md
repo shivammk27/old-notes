@@ -10,6 +10,10 @@ So I have been working on a TTS model and for the last few days I am playing wit
 ### temperature
 
 helps control the randomness / creativity of the model. Basically you adjust the probabilities to force randomness or determinism. During training the temperature is 1. Mathematically, when the probability of next token is being calculated the model will divide that by your temperature value.
+{{< katex display=true >}}
+\text{softmax}(x_i; T) = \frac{e^{\frac{x_i}{T}}}{\sum_{j} e^{\frac{x_j}{T}}}
+{{< /katex >}}
+
 
 Python function of softmax with temperature :
 

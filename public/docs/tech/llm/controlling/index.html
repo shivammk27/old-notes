@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Controlling temp, top_p and top_k # So I have been working on a TTS model and for the last few days I am playing with few hyperparameters. In my specific use case, I found that temperature, top_p and top_k played a major role in audio generated.
+temperature # helps control the randomness / creativity of the model. Basically you adjust the probabilities to force randomness or determinism. During training the temperature is 1.">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="Controlling temp, top_p and top_k" />
+<meta property="og:description" content="Controlling temp, top_p and top_k # So I have been working on a TTS model and for the last few days I am playing with few hyperparameters. In my specific use case, I found that temperature, top_p and top_k played a major role in audio generated.
+temperature # helps control the randomness / creativity of the model. Basically you adjust the probabilities to force randomness or determinism. During training the temperature is 1." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//localhost:1313/docs/tech/llm/controlling/" /><meta property="article:section" content="docs" />
+
+
+<title>Controlling temp, top_p and top_k | Shivam&#39;s Notes</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" >
+<link rel="canonical" href="//localhost:1313/docs/tech/llm/controlling/">
+<link rel="stylesheet" href="/book.min.484e3cdc2f6e660df5c808d0eaf99198acde922db9728bc590485956e896548a.css" integrity="sha256-SE483C9uZg31yAjQ6vmRmKzeki25covFkEhZVuiWVIo=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.9db7ddf80682ddb4b5db404250adb844ca3e23c0acccb0d80be4c3a6f7baac54.js" integrity="sha256-nbfd&#43;AaC3bS120BCUK24RMo&#43;I8CszLDYC&#43;TDpve6rFQ=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Shivam&#39;s Notes</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-3887642fac4aff5dd91824c665bbadb4" class="toggle" checked />
+    <label for="section-3887642fac4aff5dd91824c665bbadb4" class="flex justify-between">
+      <a role="button" class="">Tech</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/tech/llm/controlling/" class="active">Controlling temp, top_p and top_k</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/trade-days/09-05-24/" class="">09 May, 2024</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-7e686abca4f145af9f0cab13cb3fb36e" class="toggle"  />
+    <label for="section-7e686abca4f145af9f0cab13cb3fb36e" class="flex justify-between">
+      <a href="/docs/tradediary/" class="">Trade Diary</a>
+    </label>
+  
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Controlling temp, top_p and top_k</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#controlling-temp-top_p-and-top_k">Controlling temp, top_p and top_k</a>
+      <ul>
+        <li><a href="#temperature">temperature</a></li>
+        <li><a href="#top_p">top_p</a></li>
+        <li><a href="#top_k">top_k</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><h2 id="controlling-temp-top_p-and-top_k">
+  Controlling temp, top_p and top_k
+  <a class="anchor" href="#controlling-temp-top_p-and-top_k">#</a>
+</h2>
+<p>So I have been working on a TTS model and for the last few days I am playing with few hyperparameters. In my specific use case, I found that temperature, top_p and top_k played a major role in audio generated.</p>
+<h3 id="temperature">
+  temperature
+  <a class="anchor" href="#temperature">#</a>
+</h3>
+<p>helps control the randomness / creativity of the model. Basically you adjust the probabilities to force randomness or determinism. During training the temperature is 1. Mathematically, when the probability of next token is being calculated the model will divide that by your temperature value.</p>
+<p>Python function of softmax with temperature :</p>
+<pre><code>def softmax_with_temperature(logits, temperature=1.0):
+    logits /= temperature
+    exp_logits = np.exp(logits - np.max(logits))  # subtracting max for numerical stability
+    softmax_output = exp_logits / np.sum(exp_logits)
+    return softmax_output
+</code></pre>
+<h3 id="top_p">
+  top_p
+  <a class="anchor" href="#top_p">#</a>
+</h3>
+<p>top<em>p selects most likely token from a prob distribution, considering cumulative probability until it reaches a predefined threshold _p</em>. In other words, only consider the possibilities that equal or exceed this value. Value of this parameter ranges from 0.0 to 1.0</p>
+<h3 id="top_k">
+  top_k
+  <a class="anchor" href="#top_k">#</a>
+</h3>
+<p>this selects <em>k</em> most likely options (depending on their probabilities). So token with very low probability are not selected which makes output more coherent. I have found that changing top_p and temp is more useful than trying to tweak top_k.</p>
+<p><em>When we set the temperature to 0, choose only the top 1 token (K=1), or the probability threshold to 0 (P=0), it&rsquo;s like swapping out the softmax with a simple maximum selection formula. This means we&rsquo;re only focusing on the single most probable next token and ignoring everything else.</em></p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#controlling-temp-top_p-and-top_k">Controlling temp, top_p and top_k</a>
+      <ul>
+        <li><a href="#temperature">temperature</a></li>
+        <li><a href="#top_p">top_p</a></li>
+        <li><a href="#top_k">top_k</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

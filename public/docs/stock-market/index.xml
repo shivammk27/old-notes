@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Shivam&#39;s Notes</title>
+    <link>//localhost:1313/docs/stock-market/</link>
+    <description>Recent content on Shivam&#39;s Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="//localhost:1313/docs/stock-market/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Technical Analysis</title>
+      <link>//localhost:1313/docs/stock-market/techanalysis/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/docs/stock-market/techanalysis/</guid>
+      <description>hahsfd</description>
+    </item>
+    <item>
+      <title>Trade Diary</title>
+      <link>//localhost:1313/docs/stock-market/diary/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/docs/stock-market/diary/</guid>
+      <description> My trading days # I post here only about my NSE index option trades.&#xA;May 9 </description>
+    </item>
+  </channel>
+</rss>

@@ -8,18 +8,32 @@
     <language>en-us</language>
     <atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Controlling temp, top_p and top_k</title>
-      <link>//localhost:1313/docs/controlling/</link>
+      <title>09 May, 2024</title>
+      <link>//localhost:1313/docs/all-posts/09-05-24/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/docs/controlling/</guid>
+      <guid>//localhost:1313/docs/all-posts/09-05-24/</guid>
+      <description>My setup worked twice today but I did not trade it. I think I chickened out because I was not sure for some reason idk why but yes I did not follow my rules today. In the later second half, out of fomo I tried to ride the wave but got caught right on the reversal and had to book a big loss. My few days win streak ended just because of my immaturity and carelessness.</description>
+    </item>
+    <item>
+      <title>Controlling temp, top_p and top_k</title>
+      <link>//localhost:1313/docs/all-posts/controlling/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/docs/all-posts/controlling/</guid>
       <description>Controlling temp, top_p and top_k # So I have been working on a TTS model and for the last few days I am playing with few hyperparameters. In my specific use case, I found that temperature, top_p and top_k played a major role in audio generated.&#xA;temperature # helps control the randomness / creativity of the model. Basically you adjust the probabilities to force randomness or determinism. During training the temperature is 1.</description>
     </item>
     <item>
-      <title>draft</title>
-      <link>//localhost:1313/docs/two/</link>
+      <title>LLM</title>
+      <link>//localhost:1313/docs/tech/llm/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/docs/two/</guid>
-      <description>draft</description>
+      <guid>//localhost:1313/docs/tech/llm/</guid>
+      <description>my notes on LLM and anything related&#xA;Controlling top_p, top_k and temp </description>
+    </item>
+    <item>
+      <title>Trade Diary</title>
+      <link>//localhost:1313/docs/stock-market/diary/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/docs/stock-market/diary/</guid>
+      <description> My trading days # I post here only about my NSE index option trades.&#xA;May 9 </description>
     </item>
   </channel>
 </rss>

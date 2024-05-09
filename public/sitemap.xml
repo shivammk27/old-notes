@@ -2,15 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>//localhost:1313/docs/tech/</loc>
+  </url><url>
+    <loc>//localhost:1313/docs/stock-market/</loc>
+  </url><url>
+    <loc>//localhost:1313/docs/all-posts/</loc>
+  </url><url>
+    <loc>//localhost:1313/docs/all-posts/09-05-24/</loc>
+  </url><url>
     <loc>//localhost:1313/categories/</loc>
   </url><url>
-    <loc>//localhost:1313/docs/two/</loc>
-  </url><url>
-    <loc>//localhost:1313/docs/controlling/</loc>
+    <loc>//localhost:1313/docs/all-posts/controlling/</loc>
   </url><url>
     <loc>//localhost:1313/docs/</loc>
   </url><url>
+    <loc>//localhost:1313/docs/tech/llm/</loc>
+  </url><url>
     <loc>//localhost:1313/tags/</loc>
+  </url><url>
+    <loc>//localhost:1313/docs/stock-market/techanalysis/</loc>
+  </url><url>
+    <loc>//localhost:1313/docs/stock-market/diary/</loc>
   </url><url>
     <loc>//localhost:1313/</loc>
   </url>
