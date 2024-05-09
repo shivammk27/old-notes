@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Welcome on Shivam&#39;s Notes</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content in Welcome on Shivam&#39;s Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2 Post</title>
+      <link>http://localhost:1313/docs/two/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/two/</guid>
+      <description> meow meow 2 # </description>
+    </item>
+    <item>
+      <title>Controlling temp, top_p and top_k</title>
+      <link>http://localhost:1313/docs/controlling/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/controlling/</guid>
+      <description>Controlling temp, top_p and top_k # So I have been working on a TTS model and for the last few days I am playing with few hyperparameters. In my specific use case, I found that temperature, top_p and top_k played a major role in audio generated.&#xA;temperature # helps control the randomness / creativity of the model. Basically you adjust the probabilities to force randomness or determinism. During training the temperature is 1.</description>
+    </item>
+  </channel>
+</rss>
