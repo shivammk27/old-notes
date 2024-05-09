@@ -1,4 +1,4 @@
-baseURL: https://shivammk27.github.io/shivamnotes.github.io/
+baseURL:
 languageCode: en-us
 title: Shivam's Notes
 theme: hugo-book
