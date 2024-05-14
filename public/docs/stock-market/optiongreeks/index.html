@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Options Greeks (short version) # I am copying content from an old tweet of mine. If you prefer reading tweet, click here
+Markets influence the greeks, greeks then in turn influence price of an option. To make situation more complex greeks affect each other as well.
+Main Greeks are :
+1. Delta # It captures the effect of directional movement of market on option&rsquo;s premium. Say you have calculated that the underlying stock/index will move up by a certain percentage but how do you know what will be the value of options then ?">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="Options Greeks (old twitter thread)" />
+<meta property="og:description" content="Options Greeks (short version) # I am copying content from an old tweet of mine. If you prefer reading tweet, click here
+Markets influence the greeks, greeks then in turn influence price of an option. To make situation more complex greeks affect each other as well.
+Main Greeks are :
+1. Delta # It captures the effect of directional movement of market on option&rsquo;s premium. Say you have calculated that the underlying stock/index will move up by a certain percentage but how do you know what will be the value of options then ?" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//localhost:1313/docs/stock-market/optiongreeks/" /><meta property="article:section" content="docs" />
+
+
+<title>Options Greeks (old twitter thread) | Shivam&#39;s Notes</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" >
+<link rel="canonical" href="//localhost:1313/docs/stock-market/optiongreeks/">
+<link rel="stylesheet" href="/book.min.484e3cdc2f6e660df5c808d0eaf99198acde922db9728bc590485956e896548a.css" integrity="sha256-SE483C9uZg31yAjQ6vmRmKzeki25covFkEhZVuiWVIo=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.0062de8bf6c8f4d48eb02b3cca78991964d4964df03942ad52f276b9ef224871.js" integrity="sha256-AGLei/bI9NSOsCs8yniZGWTUlk3wOUKtUvJ2ue8iSHE=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Shivam&#39;s Notes</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-3887642fac4aff5dd91824c665bbadb4" class="toggle"  />
+    <label for="section-3887642fac4aff5dd91824c665bbadb4" class="flex justify-between">
+      <a role="button" class="">Tech</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/tech/llm/" class="">LLM</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-6f1223b05e4ecc213d365c00016be6b4" class="toggle" checked />
+    <label for="section-6f1223b05e4ecc213d365c00016be6b4" class="flex justify-between">
+      <a role="button" class="">Stock Market</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/stock-market/optiongreeks/" class="active">Options Greeks (old twitter thread)</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/stock-market/diary/" class="">Trade Diary</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-62b22872f29314e271eace7bb29475e4" class="toggle"  />
+    <label for="section-62b22872f29314e271eace7bb29475e4" class="flex justify-between">
+      <a role="button" class="">General Muse</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/general-muse/naval_6_habits/" class="">6 middle class habits keeping you in rat race</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/general-muse/competition/" class="">Competition is for losers</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/general-muse/framwork_thinking/" class="">Framework Thinking - How to think fast before you speak</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/general-muse/billionaire_advice/" class="">I Asked a $15BN Investor for Life Advice</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/general-muse/inconsistent/" class="">Why you are not consistent ?</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-b3c41851606cc58df695136308b89bd7" class="toggle"  />
+    <label for="section-b3c41851606cc58df695136308b89bd7" class="flex justify-between">
+      <a role="button" class="">All Posts</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/all-posts/09-05-24/" class="">09 May, 2024</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/all-posts/13-05-24/" class="">13 May, 2024</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/all-posts/controlling/" class="">Controlling temp, top_p and top_k</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Options Greeks (old twitter thread)</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#options-greeks-short-version">Options Greeks (short version)</a>
+      <ul>
+        <li><a href="#1-delta">1. Delta</a></li>
+        <li><a href="#2-gamma">2. Gamma</a></li>
+        <li><a href="#3-theta">3. Theta</a></li>
+        <li><a href="#4-vega">4. Vega</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><h2 id="options-greeks-short-version">
+  Options Greeks (short version)
+  <a class="anchor" href="#options-greeks-short-version">#</a>
+</h2>
+<p>I am copying content from an old tweet of mine. If you prefer reading tweet, <a href="https://x.com/drrstock/status/1675197046599610368">click here</a></p>
+<p>Markets influence the greeks, greeks then in turn influence price of an option. To make situation more complex greeks affect each other as well.</p>
+<p>Main Greeks are :</p>
+<h3 id="1-delta">
+  1. Delta
+  <a class="anchor" href="#1-delta">#</a>
+</h3>
+<p>It captures the effect of directional movement of market on option&rsquo;s premium.
+Say you have calculated that the underlying stock/index will move up by a certain percentage but how do you know what will be the value of options then ? Delta comes in handy here. <br>
+Delta for Call options : [0, 1] and for Put options : [-1, 0]
+What does this even mean ? Continuing with the previous example. You make position in CE and strike price you choose has a delta of say 0.6, it means that if underlying is up by 100, your option price will go up by 60 <br>
+Similarly, if you make position in PE of a strike price which has delta -0.4 If market falls 100 points your PE price will go up by 40 &amp; if market goes up by 100 your PE will go down by -40.
+Keep in mind, these are theoretical calculations &amp; not exactly how it works in real life. <br>
+You can check greeks value on any of the software of your choosing. \</p>
+<table>
+<thead>
+<tr>
+<th>option type</th>
+<th>approx delta value (CE)</th>
+<th>approx delta value (PE)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Deep ITM</td>
+<td>+0.8 to +1</td>
+<td>-0.8 to -1</td>
+</tr>
+<tr>
+<td>Slighty ITM</td>
+<td>+0.6 to +1</td>
+<td>-0.6 to -1</td>
+</tr>
+<tr>
+<td>ATM</td>
+<td>+0.45 to +0.55</td>
+<td>-0.45 to -0.55</td>
+</tr>
+<tr>
+<td>Slightly OTM</td>
+<td>+0.45 to +0.3</td>
+<td>-0.45 to -0.3</td>
+</tr>
+<tr>
+<td>Deep OTM</td>
+<td>+0.3 to 0</td>
+<td>-0.3 to 0</td>
+</tr>
+</tbody>
+</table>
+<h3 id="2-gamma">
+  2. Gamma
+  <a class="anchor" href="#2-gamma">#</a>
+</h3>
+<p>Well if delta changes so does my price. So how can i estimate the likely change in delta ? Answer is Gamma. It is expressed as deltas gained or lost per 1 point change in underlying - with the delta increasing by the amount of gamma when underlying rises &amp; vice versa. <br>
+Gamma is always a positive number for both Call and Put Option. Therefore when the trader is long options (call or put) trader is considered &lsquo;Long gamma&rsquo; and when he is short options (call or puts) he is considered &lsquo;Short Gamma&rsquo;. <br>
+Gamma is really helpful in risk estimation. I would suggest anyone to read this in more detail to understand how to manage risk with change in gamma.</p>
+<blockquote>
+<p>Note : <em>Gamma is highest for ATM options and low for ITM and OTM options.</em></p>
+</blockquote>
+<h3 id="3-theta">
+  3. Theta
+  <a class="anchor" href="#3-theta">#</a>
+</h3>
+<p>The Theta or time decay factor is the rate at which an option loses value as time passes.
+Every beginner buys an option and even if the market was at same levels option&rsquo;s value decreases and he/she thinks how am I seeing losses here ? Well say hello to Theta. <br>
+Nifty is 19000 suppose, what is the probability that it will move 200 points &amp; 19200 CE will become ITM ? Depends how much time is left in expiry. If 30 days left, chances are high. If only 10 days left, it is still possible but less probable. Nearer the expiry, lesser the chance. <br>
+Option premium = intrinsic value + time value.
+This time value is the value that gets eroded.</p>
+<blockquote>
+<p>OTM options have no intrinsic value. And if options stays OTM till expiry thanks to theta it becomes 0.
+Rate of drop in premium due to theta is higher when close to expiry</p>
+</blockquote>
+<h3 id="4-vega">
+  4. Vega
+  <a class="anchor" href="#4-vega">#</a>
+</h3>
+<p>Vega of an option measures the rate of change of option’s value (premium) with every percentage change in volatility. We are talking about implied volatility here. <br>
+Other types are historical volatility &amp; forecasted volatility. But Implied Volatility (IV) is more valued. <br>
+When volatility increases, the option premiums have a higher chance to expire in the money.
+So when volatility increases, premiums get much higher. But the question is ‘By how much ?’. This is exactly what the Vega tells us. <br>
+The effect of increase in volatility is maximum when there are more days to expiry – this means if you are at the start of series, and the volatility is high then you know premiums are plum.</p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#options-greeks-short-version">Options Greeks (short version)</a>
+      <ul>
+        <li><a href="#1-delta">1. Delta</a></li>
+        <li><a href="#2-gamma">2. Gamma</a></li>
+        <li><a href="#3-theta">3. Theta</a></li>
+        <li><a href="#4-vega">4. Vega</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
