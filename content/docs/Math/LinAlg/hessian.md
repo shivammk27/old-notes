@@ -60,3 +60,4 @@ Hessian matrix is used for scalar-valued functions to analyze local curvature, w
 2. https://www.khanacademy.org/math/multivariable-calculus/applications-of-multivariable-derivatives/quadratic-approximations/a/the-hessian
 3. https://brilliant.org/wiki/hessian-matrix/#:~:text=The%20Hessian%20Matrix%20is%20a,of%20local%20maxima%20or%20minima.
 4. https://www.reddit.com/r/mathematics/comments/wwk6ig/upperbound_to_largest_eigenvalue_of_hessian_matrix/ 
+5. https://people.iith.ac.in/ashok/Maths_Lectures/TutorialB/Hessian_Examples.pdf
