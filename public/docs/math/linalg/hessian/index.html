@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Hessian Matrix # A Hessian matrix is a square matrix of second-order partial derivatives of a scalar-valued function. It describes the local curvature of a function. For a function f(x, y, &hellip;, z) of several variables, the Hessian matrix H is defined as:
+\[\begin{bmatrix} \frac{\partial^2 f}{\partial x^2} &amp; \frac{\partial^2 f}{\partial x \partial y} &amp; \cdots &amp; \frac{\partial^2 f}{\partial x \partial z} \\ \frac{\partial^2 f}{\partial y \partial x} &amp; \frac{\partial^2 f}{\partial y^2} &amp; \cdots &amp; \frac{\partial^2 f}{\partial y \partial z} \\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\ \frac{\partial^2 f}{\partial z \partial x} &amp; \frac{\partial^2 f}{\partial z \partial y} &amp; \cdots &amp; \frac{\partial^2 f}{\partial z^2} \end{bmatrix}\] The above Hessian is of the the function 𝑓:𝑅′′→𝑅 where all second order partial derivatives of 𝑓 exist and are continuous throughout its domain &amp; the function is $$f(x_1, x_2, x_3, \ldots, x_n)$$">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="Hessian Matrix" />
+<meta property="og:description" content="Hessian Matrix # A Hessian matrix is a square matrix of second-order partial derivatives of a scalar-valued function. It describes the local curvature of a function. For a function f(x, y, &hellip;, z) of several variables, the Hessian matrix H is defined as:
+\[\begin{bmatrix} \frac{\partial^2 f}{\partial x^2} &amp; \frac{\partial^2 f}{\partial x \partial y} &amp; \cdots &amp; \frac{\partial^2 f}{\partial x \partial z} \\ \frac{\partial^2 f}{\partial y \partial x} &amp; \frac{\partial^2 f}{\partial y^2} &amp; \cdots &amp; \frac{\partial^2 f}{\partial y \partial z} \\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\ \frac{\partial^2 f}{\partial z \partial x} &amp; \frac{\partial^2 f}{\partial z \partial y} &amp; \cdots &amp; \frac{\partial^2 f}{\partial z^2} \end{bmatrix}\] The above Hessian is of the the function 𝑓:𝑅′′→𝑅 where all second order partial derivatives of 𝑓 exist and are continuous throughout its domain &amp; the function is $$f(x_1, x_2, x_3, \ldots, x_n)$$" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//localhost:1313/docs/math/linalg/hessian/" /><meta property="article:section" content="docs" />
+
+
+<title>Hessian Matrix | Shivam&#39;s Notes</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" >
+<link rel="canonical" href="//localhost:1313/docs/math/linalg/hessian/">
+<link rel="stylesheet" href="/book.min.484e3cdc2f6e660df5c808d0eaf99198acde922db9728bc590485956e896548a.css" integrity="sha256-SE483C9uZg31yAjQ6vmRmKzeki25covFkEhZVuiWVIo=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.80a26c126c9fda76e0a5086caab5e7d08b8477b98970e6c151da5ba9c9d0773f.js" integrity="sha256-gKJsEmyf2nbgpQhsqrXn0IuEd7mJcObBUdpbqcnQdz8=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Shivam&#39;s Notes</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <span>Tech</span>
+  
+
+          
+  <ul>
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-36b51988da83d4b466d9a172f07ccffc" class="toggle"  />
+    <label for="section-36b51988da83d4b466d9a172f07ccffc" class="flex justify-between">
+      <a role="button" class="">Deep Learning</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/tech/deep-learning/llm/" class="">LLM</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <span>Math</span>
+  
+
+          
+  <ul>
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-1f733edee5c87b319d622ef5fc02abcc" class="toggle" checked />
+    <label for="section-1f733edee5c87b319d622ef5fc02abcc" class="flex justify-between">
+      <a role="button" class="">Lin Alg</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/math/linalg/hessian/" class="active">Hessian Matrix</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-62b22872f29314e271eace7bb29475e4" class="toggle"  />
+    <label for="section-62b22872f29314e271eace7bb29475e4" class="flex justify-between">
+      <a role="button" class="">General Muse</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/general-muse/naval_6_habits/" class="">6 middle class habits keeping you in rat race</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/general-muse/competition/" class="">Competition is for losers</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/general-muse/framwork_thinking/" class="">Framework Thinking - How to think fast before you speak</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/general-muse/billionaire_advice/" class="">I Asked a $15BN Investor for Life Advice</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/general-muse/inconsistent/" class="">Why you are not consistent ?</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-6f1223b05e4ecc213d365c00016be6b4" class="toggle"  />
+    <label for="section-6f1223b05e4ecc213d365c00016be6b4" class="flex justify-between">
+      <a role="button" class="">Stock Market</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/stock-market/optiongreeks/" class="">Options Greeks (old twitter thread)</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/stock-market/diary/" class="">Trade Diary</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-b3c41851606cc58df695136308b89bd7" class="toggle"  />
+    <label for="section-b3c41851606cc58df695136308b89bd7" class="flex justify-between">
+      <a role="button" class="">All Posts</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/all-posts/09-05-24/" class="">09 May, 2024</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/all-posts/13-05-24/" class="">13 May, 2024</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/all-posts/controlling/" class="">Controlling temp, top_p and top_k</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Hessian Matrix</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#hessian-matrix">Hessian Matrix</a>
+      <ul>
+        <li><a href="#conditions-for-minima-maxima-saddle-point">Conditions for Minima, Maxima, Saddle point</a></li>
+        <li><a href="#jacobian-vs-hessian">Jacobian v/s Hessian</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><h2 id="hessian-matrix">
+  Hessian Matrix
+  <a class="anchor" href="#hessian-matrix">#</a>
+</h2>
+<p>A Hessian matrix is a square matrix of second-order partial derivatives of a scalar-valued function. It describes the local curvature of a function.
+For a function f(x, y, &hellip;, z) of several variables, the Hessian matrix H is defined as:</p>
+<p>
+<link rel="stylesheet" href="/katex/katex.min.css" />
+<script defer src="/katex/katex.min.js"></script>
+<script defer src="/katex/auto-render.min.js" onload="renderMathInElement(document.body);"></script><span>
+  \[\begin{bmatrix}
+\frac{\partial^2 f}{\partial x^2} &amp; \frac{\partial^2 f}{\partial x \partial y} &amp; \cdots &amp; \frac{\partial^2 f}{\partial x \partial z} \\
+\frac{\partial^2 f}{\partial y \partial x} &amp; \frac{\partial^2 f}{\partial y^2} &amp; \cdots &amp; \frac{\partial^2 f}{\partial y \partial z} \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+\frac{\partial^2 f}{\partial z \partial x} &amp; \frac{\partial^2 f}{\partial z \partial y} &amp; \cdots &amp; \frac{\partial^2 f}{\partial z^2}
+\end{bmatrix}\]
+</span>
+
+The above Hessian is of the the function
+𝑓:𝑅′′→𝑅 where all second order partial derivatives of 𝑓 exist and are continuous throughout its domain &amp; the function is $$f(x_1, x_2, x_3, \ldots, x_n)$$</p>
+<p>The Hessian matrix plays an important role in optimization, where it is used to find points where the function has a local maximum or minimum. <br>
+<br>
+Specifically:</p>
+<ul>
+<li>If the Hessian is positive definite at a point, then that point is a local minimum of the function.</li>
+<li>If the Hessian is negative definite at a point, then that point is a local maximum of the function.</li>
+<li>If the Hessian is indefinite (has both positive and negative eigenvalues), then the point is a saddle point.</li>
+</ul>
+<p>The Hessian is also used for calculating the Newton direction for Newton&rsquo;s method in optimization problems.</p>
+<h3 id="conditions-for-minima-maxima-saddle-point">
+  Conditions for Minima, Maxima, Saddle point
+  <a class="anchor" href="#conditions-for-minima-maxima-saddle-point">#</a>
+</h3>
+<p>The conditions are based on the eigenvalues of the Hessian matrix H:</p>
+<ul>
+<li><em>Local Maximum</em>: If all the eigenvalues of H are negative at a critical point, then the function has a local maximum at that point.</li>
+<li><em>Local Minimum</em>: If all the eigenvalues of H are positive at a critical point, then the function has a local minimum at that point.</li>
+<li><em>Saddle Point</em>: If the eigenvalues of H are both positive and negative at a critical point, then the function has a saddle point at that point.</li>
+<li><em>Inconclusive</em>: If some eigenvalues are zero, then the second derivative test is inconclusive, and higher-order derivatives may need to be considered to determine the nature of the critical point.</li>
+</ul>
+<h3 id="jacobian-vs-hessian">
+  Jacobian v/s Hessian
+  <a class="anchor" href="#jacobian-vs-hessian">#</a>
+</h3>
+<p>Hessian matrix is used for scalar-valued functions to analyze local curvature, while the Jacobian matrix is used for vector-valued functions to analyze rate of change.</p>
+<p><strong>Jacobian</strong></p>
+<ul>
+<li>The Jacobian matrix is used to describe the rate at which a vector-valued function changes with respect to its input variables.</li>
+<li>It is a matrix of first-order partial derivatives of a vector-valued function with respect to its variables.</li>
+<li>If the function is F(x, y, z) = (f1(x, y, z), f2(x, y, z), f3(x, y, z)), then the Jacobian matrix would be a 3x3 matrix where each row represents the gradient of one of the component functions.</li>
+<li>It is used in various fields like physics, engineering, and optimization.</li>
+</ul>
+<p><strong>Hessian Matrix</strong></p>
+<ul>
+<li>The Hessian matrix is used to describe the local curvature of a scalar-valued function of multiple variables.</li>
+<li>It is a square matrix of second-order partial derivatives of a scalar function with respect to its variables.</li>
+<li>If the function is f(x, y, z), then the Hessian matrix would be a 3x3 matrix where each entry represents a second-order partial derivative.</li>
+<li>It helps in determining whether a critical point is a maximum, minimum, or saddle point.</li>
+</ul>
+<hr>
+<p><strong>Further reading :</strong></p>
+<ol>
+<li><a href="https://resources.system-analysis.cadence.com/blog/msa2022-all-about-the-hessian-matrix-convexity-and-optimization">https://resources.system-analysis.cadence.com/blog/msa2022-all-about-the-hessian-matrix-convexity-and-optimization</a></li>
+<li><a href="https://www.khanacademy.org/math/multivariable-calculus/applications-of-multivariable-derivatives/quadratic-approximations/a/the-hessian">https://www.khanacademy.org/math/multivariable-calculus/applications-of-multivariable-derivatives/quadratic-approximations/a/the-hessian</a></li>
+<li><a href="https://brilliant.org/wiki/hessian-matrix/#:~:text=The%20Hessian%20Matrix%20is%20a,of%20local%20maxima%20or%20minima">https://brilliant.org/wiki/hessian-matrix/#:~:text=The%20Hessian%20Matrix%20is%20a,of%20local%20maxima%20or%20minima</a>.</li>
+<li><a href="https://www.reddit.com/r/mathematics/comments/wwk6ig/upperbound_to_largest_eigenvalue_of_hessian_matrix/">https://www.reddit.com/r/mathematics/comments/wwk6ig/upperbound_to_largest_eigenvalue_of_hessian_matrix/</a></li>
+</ol>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#hessian-matrix">Hessian Matrix</a>
+      <ul>
+        <li><a href="#conditions-for-minima-maxima-saddle-point">Conditions for Minima, Maxima, Saddle point</a></li>
+        <li><a href="#jacobian-vs-hessian">Jacobian v/s Hessian</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

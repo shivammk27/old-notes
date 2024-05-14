@@ -4,11 +4,17 @@
   <url>
     <loc>//localhost:1313/docs/tech/</loc>
   </url><url>
-    <loc>//localhost:1313/docs/stock-market/</loc>
+    <loc>//localhost:1313/docs/math/</loc>
   </url><url>
     <loc>//localhost:1313/docs/general-muse/</loc>
   </url><url>
+    <loc>//localhost:1313/docs/stock-market/</loc>
+  </url><url>
     <loc>//localhost:1313/docs/all-posts/</loc>
+  </url><url>
+    <loc>//localhost:1313/docs/math/linalg/</loc>
+  </url><url>
+    <loc>//localhost:1313/docs/tech/deep-learning/</loc>
   </url><url>
     <loc>//localhost:1313/docs/all-posts/09-05-24/</loc>
   </url><url>
@@ -26,9 +32,11 @@
   </url><url>
     <loc>//localhost:1313/docs/general-muse/framwork_thinking/</loc>
   </url><url>
+    <loc>//localhost:1313/docs/math/linalg/hessian/</loc>
+  </url><url>
     <loc>//localhost:1313/docs/general-muse/billionaire_advice/</loc>
   </url><url>
-    <loc>//localhost:1313/docs/tech/llm/</loc>
+    <loc>//localhost:1313/docs/tech/deep-learning/llm/</loc>
   </url><url>
     <loc>//localhost:1313/docs/stock-market/optiongreeks/</loc>
   </url><url>

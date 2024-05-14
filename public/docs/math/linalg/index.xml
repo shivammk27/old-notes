@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Shivam&#39;s Notes</title>
+    <link>//localhost:1313/docs/math/linalg/</link>
+    <description>Recent content on Shivam&#39;s Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="//localhost:1313/docs/math/linalg/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hessian Matrix</title>
+      <link>//localhost:1313/docs/math/linalg/hessian/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/docs/math/linalg/hessian/</guid>
+      <description>Hessian Matrix # A Hessian matrix is a square matrix of second-order partial derivatives of a scalar-valued function. It describes the local curvature of a function. For a function f(x, y, &amp;hellip;, z) of several variables, the Hessian matrix H is defined as:&#xA;\[\begin{bmatrix} \frac{\partial^2 f}{\partial x^2} &amp;amp; \frac{\partial^2 f}{\partial x \partial y} &amp;amp; \cdots &amp;amp; \frac{\partial^2 f}{\partial x \partial z} \\ \frac{\partial^2 f}{\partial y \partial x} &amp;amp; \frac{\partial^2 f}{\partial y^2} &amp;amp; \cdots &amp;amp; \frac{\partial^2 f}{\partial y \partial z} \\ \vdots &amp;amp; \vdots &amp;amp; \ddots &amp;amp; \vdots \\ \frac{\partial^2 f}{\partial z \partial x} &amp;amp; \frac{\partial^2 f}{\partial z \partial y} &amp;amp; \cdots &amp;amp; \frac{\partial^2 f}{\partial z^2} \end{bmatrix}\] The above Hessian is of the the function 𝑓:𝑅′′→𝑅 where all second order partial derivatives of 𝑓 exist and are continuous throughout its domain &amp;amp; the function is $$f(x_1, x_2, x_3, \ldots, x_n)$$</description>
+    </item>
+  </channel>
+</rss>
