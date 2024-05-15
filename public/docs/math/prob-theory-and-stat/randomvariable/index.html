@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Random Variable # Random variable is a function which maps the outcome of a simple random experiment to a real number. denoted by capital italized roman characters like \(X\) or \(Y\) .
+Suppose that a coin is tossed twice so that the sample space is \(S={HH, HT, TH, TT}\) . Let \(X\) represent the number of heads that can come up. With each sample point we can associate a number for \(X\) as shown below.">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="Random Variable" />
+<meta property="og:description" content="Random Variable # Random variable is a function which maps the outcome of a simple random experiment to a real number. denoted by capital italized roman characters like \(X\) or \(Y\) .
+Suppose that a coin is tossed twice so that the sample space is \(S={HH, HT, TH, TT}\) . Let \(X\) represent the number of heads that can come up. With each sample point we can associate a number for \(X\) as shown below." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//localhost:1313/docs/math/prob-theory-and-stat/randomvariable/" /><meta property="article:section" content="docs" />
+
+
+<title>Random Variable | Shivam&#39;s Notes</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" >
+<link rel="canonical" href="//localhost:1313/docs/math/prob-theory-and-stat/randomvariable/">
+<link rel="stylesheet" href="/book.min.484e3cdc2f6e660df5c808d0eaf99198acde922db9728bc590485956e896548a.css" integrity="sha256-SE483C9uZg31yAjQ6vmRmKzeki25covFkEhZVuiWVIo=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.8c3cc7d69336ac4673bb188eb044e3dab1f288514d5fb7fd5cc2500c6d7ce0b2.js" integrity="sha256-jDzH1pM2rEZzuxiOsETj2rHyiFFNX7f9XMJQDG184LI=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Shivam&#39;s Notes</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <span>Tech</span>
+  
+
+          
+  <ul>
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-36b51988da83d4b466d9a172f07ccffc" class="toggle"  />
+    <label for="section-36b51988da83d4b466d9a172f07ccffc" class="flex justify-between">
+      <a role="button" class="">Deep Learning</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/tech/deep-learning/llm/" class="">LLM</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <span>Math</span>
+  
+
+          
+  <ul>
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-1f733edee5c87b319d622ef5fc02abcc" class="toggle"  />
+    <label for="section-1f733edee5c87b319d622ef5fc02abcc" class="flex justify-between">
+      <a role="button" class="">Lin Alg</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/math/linalg/hessian/" class="">Hessian Matrix</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-d31abfad503b3b63f5e55014d6d58576" class="toggle" checked />
+    <label for="section-d31abfad503b3b63f5e55014d6d58576" class="flex justify-between">
+      <a role="button" class="">Prob Theory and Stat</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/math/prob-theory-and-stat/randomvariable/" class="active">Random Variable</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-62b22872f29314e271eace7bb29475e4" class="toggle"  />
+    <label for="section-62b22872f29314e271eace7bb29475e4" class="flex justify-between">
+      <a role="button" class="">General Muse</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/general-muse/naval_6_habits/" class="">6 middle class habits keeping you in rat race</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/general-muse/competition/" class="">Competition is for losers</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/general-muse/framwork_thinking/" class="">Framework Thinking - How to think fast before you speak</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/general-muse/billionaire_advice/" class="">I Asked a $15BN Investor for Life Advice</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/general-muse/inconsistent/" class="">Why you are not consistent ?</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-6f1223b05e4ecc213d365c00016be6b4" class="toggle"  />
+    <label for="section-6f1223b05e4ecc213d365c00016be6b4" class="flex justify-between">
+      <a role="button" class="">Stock Market</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/stock-market/optiongreeks/" class="">Options Greeks (old twitter thread)</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/stock-market/diary/" class="">Trade Diary</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-b3c41851606cc58df695136308b89bd7" class="toggle"  />
+    <label for="section-b3c41851606cc58df695136308b89bd7" class="flex justify-between">
+      <a role="button" class="">All Posts</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/all-posts/09-05-24/" class="">09 May, 2024</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/all-posts/13-05-24/" class="">13 May, 2024</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/all-posts/controlling/" class="">Controlling temp, top_p and top_k</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Random Variable</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#random-variable">Random Variable</a>
+      <ul>
+        <li><a href="#types-of-random-variable">Types of Random Variable</a></li>
+        <li><a href="#probability-function">Probability Function</a></li>
+        <li><a href="#discrete-probability-distributions">Discrete Probability Distributions</a></li>
+        <li><a href="#expected-value-and-variance-of-a-discrete-random-variable">Expected Value and Variance of a Discrete Random Variable</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><h2 id="random-variable">
+  Random Variable
+  <a class="anchor" href="#random-variable">#</a>
+</h2>
+<p>Random variable is a function which maps the outcome of a simple random experiment to a real number.
+denoted by capital italized roman characters like 
+<link rel="stylesheet" href="/katex/katex.min.css" />
+<script defer src="/katex/katex.min.js"></script>
+<script defer src="/katex/auto-render.min.js" onload="renderMathInElement(document.body);"></script><span>
+  \(X\)
+</span>
+ or <span>
+  \(Y\)
+</span>
+.</p>
+<p>Suppose that a coin is tossed twice so that the sample space is <span>
+  \(S={HH, HT, TH, TT}\)
+</span>
+. Let <span>
+  \(X\)
+</span>
+ represent the number of heads that can come up. With each sample point we can associate a number for <span>
+  \(X\)
+</span>
+ as shown below.</p>
+<table>
+<thead>
+<tr>
+<th>Sample point</th>
+<th>HH</th>
+<th>HT</th>
+<th>TH</th>
+<th>TT</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>X</td>
+<td>2</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<h3 id="types-of-random-variable">
+  Types of Random Variable
+  <a class="anchor" href="#types-of-random-variable">#</a>
+</h3>
+<ul>
+<li>Discrete
+<ul>
+<li>can take finite or countably infinite number of values</li>
+<li>probability distribution PMF :
+<span>
+  \(    \begin{cases}
+    P(X=x) &amp;\text{if }  x ∈ Ω \\
+    0 &amp;\text{if } x ∉ Ω
+    \end{cases}
+    \)
+</span>
+</li>
+</ul>
+</li>
+<li>Continuous
+<ul>
+<li>takes on a noncountably infinite number of values</li>
+<li>probability distribution PDF : <span>
+  \(P(a \leq X \leq b) = \int_{a}^{b} f(x) dx\)
+</span>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="probability-function">
+  Probability Function
+  <a class="anchor" href="#probability-function">#</a>
+</h3>
+<p>A probability function is a mathematical function that provides probabilities for the possible outcomes of the random variable, <span>
+  \(X.\)
+</span>
+ It is typically denoted as <span>
+  \(f(x)\)
+</span>
+.</p>
+<ol>
+<li>
+<p><strong>Probability Mass Function</strong> <br>
+A probability mass function (PMF) is a function that gives the probability that a discrete random variable is exactly equal to a certain value. In other words, it maps each possible outcome of a discrete random variable to its probability of occurrence.<br>
+If <span>
+  \(X\)
+</span>
+ is discrete, then <span>
+  \(f(x) = P(X=x)\)
+</span>
+. In other words, the PMF for a constant,<span>
+  \(x\)
+</span>
+ , is the probability that the random variable <span>
+  \(X\)
+</span>
+ is equal to <span>
+  \(x\)
+</span>
+. <br>
+Properties of PMF :</p>
+<ul>
+<li><span>
+  \( {f(x) ≥ 0}\)
+</span>
+ for x in sample space otherwise 0.</li>
+<li><span>
+  \( {\sum_{x}^{} f(x) = 1}\)
+</span>
+.</li>
+</ul>
+</li>
+<li>
+<p><strong>Probability Density Function</strong><br>
+If the random variable is a continuous random variable, the probability function is usually called the probability density function (PDF). Contrary to the discrete case, <br>
+<span>
+  \(f(x) \neq P(X=x)\)
+</span>
+
+Properties of PDF :</p>
+<ul>
+<li><span>
+  \( {f(x) ≥ 0}\)
+</span>
+ for x in sample space otherwise 0.</li>
+<li>Area under the curve is equal to 1.</li>
+</ul>
+</li>
+<li>
+<p><strong>Cumulative Distribution Function</strong><br>
+A cumulative distribution function (CDF), usually denoted
+<span>
+  \(F(x)\)
+</span>
+, is a function that gives the probability that the random variable, <span>
+  \(X\)
+</span>
+, is less than or equal to the value <span>
+  \(x\)
+</span>
+.</p>
+</li>
+</ol>
+<h3 id="discrete-probability-distributions">
+  Discrete Probability Distributions
+  <a class="anchor" href="#discrete-probability-distributions">#</a>
+</h3>
+<p>Let <span>
+  \(X\)
+</span>
+ be a discrete random variable, and suppose that the possible values that it can assume are given by <span>
+  \(x1, x2, x3, . . . ,\)
+</span>
+ arranged in some order. Suppose also that these values are assumed with probabilities given by :</p>
+<span>
+  \(P(X=x_k) = f(x_k),k = 1, 2, 3, 4,...\)
+</span>
+
+<p>It is convenient to introduce the probability function, also referred to as probability distribution, given by :</p>
+<span>
+  \(P(X=x) = f(x)\)
+</span>
+
+<p>For <span>
+  \(x=x_k\)
+</span>
+ this reduces to (1) while for other values of <span>
+  \(x, f(x) = 0\)
+</span>
+.
+In general, <span>
+  \(f(x)\)
+</span>
+ is a probability function if</p>
+<ol>
+<li><span>
+  \( {f(x) ≥ 0}\)
+</span>
+</li>
+<li><span>
+  \( {\sum_{x}^{} f(x) = 1}\)
+</span>
+
+where the sum is taken over all possible values of <span>
+  \(x\)
+</span>
+.</li>
+</ol>
+<h3 id="expected-value-and-variance-of-a-discrete-random-variable">
+  Expected Value and Variance of a Discrete Random Variable
+  <a class="anchor" href="#expected-value-and-variance-of-a-discrete-random-variable">#</a>
+</h3>
+<p>Expected value or mean of discrete random variable is denoted by <span>
+  \(\mu = E(X) = \sum x_i{f(x_i)}\)
+</span>
+. <br>
+Formula basically says multiply each value by its respective probability and add all of them together.<br>
+<br>
+Variance of a discrete random variable is given by <span>
+  \(\sigma = Var(X)=(\sum x_i-\mu)^2{f(x_i)}\)
+</span>
+
+Formula basically says take each value of x, subtract the expected value, square that value and multiply that value by its probability. Then sum all of those values.</p>
+<hr>
+<ol>
+<li><a href="https://www.gs.washington.edu/academics/courses/akey/56008/lecture/lecture4.pdf">https://www.gs.washington.edu/academics/courses/akey/56008/lecture/lecture4.pdf</a></li>
+<li><a href="http://users.stat.umn.edu/~helwig/notes/RandomVariables.pdf">http://users.stat.umn.edu/~helwig/notes/RandomVariables.pdf</a></li>
+<li><a href="http://www.stat.yale.edu/Courses/1997-98/101/ranvar.htm">http://www.stat.yale.edu/Courses/1997-98/101/ranvar.htm</a></li>
+<li><a href="https://www.stat.pitt.edu/stoffer/tsa4/intro_prob.pdf">https://www.stat.pitt.edu/stoffer/tsa4/intro_prob.pdf</a></li>
+<li><a href="https://byjus.com/maths/random-variable/">https://byjus.com/maths/random-variable/</a></li>
+<li><a href="https://online.stat.psu.edu/stat500/lesson/3/3.1">https://online.stat.psu.edu/stat500/lesson/3/3.1</a></li>
+</ol>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#random-variable">Random Variable</a>
+      <ul>
+        <li><a href="#types-of-random-variable">Types of Random Variable</a></li>
+        <li><a href="#probability-function">Probability Function</a></li>
+        <li><a href="#discrete-probability-distributions">Discrete Probability Distributions</a></li>
+        <li><a href="#expected-value-and-variance-of-a-discrete-random-variable">Expected Value and Variance of a Discrete Random Variable</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

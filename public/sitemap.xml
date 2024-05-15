@@ -16,6 +16,8 @@
   </url><url>
     <loc>//localhost:1313/docs/tech/deep-learning/</loc>
   </url><url>
+    <loc>//localhost:1313/docs/math/prob-theory-and-stat/</loc>
+  </url><url>
     <loc>//localhost:1313/docs/all-posts/09-05-24/</loc>
   </url><url>
     <loc>//localhost:1313/docs/all-posts/13-05-24/</loc>
@@ -39,6 +41,8 @@
     <loc>//localhost:1313/docs/tech/deep-learning/llm/</loc>
   </url><url>
     <loc>//localhost:1313/docs/stock-market/optiongreeks/</loc>
+  </url><url>
+    <loc>//localhost:1313/docs/math/prob-theory-and-stat/randomvariable/</loc>
   </url><url>
     <loc>//localhost:1313/tags/</loc>
   </url><url>
